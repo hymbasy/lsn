@@ -19,4 +19,7 @@
         SELECT id,userName,passWord,user_sex,nick_name FROM USERS WHERE userName=#{userName}
     </select>
 
+    <select id="selectUserByNameAndPassword" parameterType="java.util.Map" resultType="com.alex.model.User">
+         SELECT id,userName,passWord,user_sex,nick_name FROM USERS WHERE userName=#{userName} AND passWord=#{passWord}
+    </select>
 </mapper>
